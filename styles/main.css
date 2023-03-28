@@ -3508,17 +3508,23 @@ section {
 
 .section-image {
   display: flex;
+  gap: 3rem;
+  border-radius: 1.5rem;
+}
+.section-image:not(:last-child) {
+  margin-bottom: 4rem;
 }
 @media (max-width: 41em) {
   .section-image {
     flex-wrap: wrap;
+    gap: 1.2rem;
   }
 }
 .section-image__img {
   position: relative;
-  width: 50%;
-  min-height: 100%;
-  flex-shrink: 0;
+  flex: 0 0 30%;
+  border-radius: 1.5rem;
+  overflow: hidden;
 }
 .section-image__img img {
   position: absolute;
@@ -3532,7 +3538,7 @@ section {
 }
 @media (max-width: 41em) {
   .section-image__img {
-    width: 100%;
+    flex-basis: 100%;
   }
   .section-image__img img {
     position: relative !important;
@@ -3543,15 +3549,6 @@ section {
     transform: translate(0, 0);
   }
 }
-.section-image__content {
-  padding: 3rem;
-  background: #F8F8FA;
-}
-@media (max-width: 62em) {
-  .section-image__content {
-    padding: 2rem;
-  }
-}
 .section-image__content.content p {
   font-size: 1.6rem;
   text-align: justify;
@@ -3559,7 +3556,6 @@ section {
 
 .sections-image {
   overflow: hidden;
-  border-radius: 1.5rem;
 }
 .sections-image .section-image:nth-child(even) .section-image__content {
   order: -1;
