@@ -3032,6 +3032,9 @@ section {
   flex-direction: column;
   gap: 2rem;
 }
+.airport-grid__item:hover .airport-grid__image img {
+  transform: scale(1.15);
+}
 .airport-grid__image {
   display: block;
   position: relative;
@@ -3046,6 +3049,7 @@ section {
   top: 0;
   left: 0;
   object-fit: cover;
+  transition: all 0.6s ease-in-out;
 }
 .airport-grid__icon {
   display: flex;
@@ -3054,7 +3058,7 @@ section {
   height: 4rem;
 }
 .airport-grid__icon img {
-  max-width: 100%;
+  max-width: 12rem;
   object-fit: contain;
 }
 
