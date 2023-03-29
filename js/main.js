@@ -368,9 +368,14 @@ if (document.querySelector(".dashboard")) {
       acTitle.forEach(function (item) {
         item.classList.remove("active");
       });
-      acTitleFirst.forEach(function (item) {
-        item.querySelector(".accordion__title").classList.add("active");
-      });
+
+      /**
+       * Automatic opening of the first element in the accordion
+       */
+      // acTitleFirst.forEach((item) => {
+      //     item.querySelector(".accordion__title").classList.add("active");
+      // });
+
       if (item.hasAttribute("data-tab-target")) {
         var tabTargetAttr = this.getAttribute("data-tab-target");
         var tabTarget = document.getElementById(tabTargetAttr);

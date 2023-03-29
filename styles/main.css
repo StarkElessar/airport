@@ -1899,6 +1899,9 @@ section {
   transition: color 0.6s;
   font-weight: 600;
   position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
 }
 .accordion__title:hover, .accordion__title.active {
   color: #0041F9;
@@ -1929,6 +1932,27 @@ section {
   .accordion__title.active + .accordion__body {
     max-height: 100rem;
   }
+}
+.accordion__title.active .accordion__title-image {
+  animation: hide-image 0.3s forwards ease-in-out;
+}
+.accordion__title-image {
+  flex: 0 0 8rem;
+  height: 4rem;
+  position: relative;
+  border-radius: 0.8rem;
+  overflow: hidden;
+  animation: show-image 0.3s forwards;
+}
+.accordion__title-image img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .accordion__body {
   padding-top: 0;
@@ -1964,6 +1988,26 @@ section {
   }
 }
 
+@keyframes hide-image {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    position: absolute;
+    transform: translateX(-100%);
+  }
+}
+@keyframes show-image {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 .tabs__cta {
   position: relative;
   margin-bottom: 4rem;
