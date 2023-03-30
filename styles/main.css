@@ -3763,6 +3763,11 @@ section {
   order: -1;
   flex-grow: 1;
 }
+.dashboard__content-ad-materials {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
 
 .categories .tabs {
   animation: fade-up 0.6s ease-in-out;
